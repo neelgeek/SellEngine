@@ -1,0 +1,59 @@
+<HTML>
+
+<HEAD>
+<style>
+.register{
+margin: 180px;
+ font-family :"Impact", Charcoal, sans-serif;
+  text-align:center;
+background-color:#039BE5;
+height:300px;
+width :200px;
+padding: 15px 15px;
+}
+</style>
+</HEAD>
+
+<BODY bgcolor="#81D4FA">
+<script>
+function validateform()
+{
+var x=document.forms["reg_form"]["firstname"].value;
+    if (x == "" || x == null) {
+        alert("Name must be filled out");
+		document.firstname.focus();
+        return false;
+}
+}
+</script>
+
+<center>
+<form class="register"  name="reg_form" method="post" onsubmit="return validateform()">
+  Full name:<br>
+  <input type="text" name="firstname" required >
+  <br>
+  User id:<br>
+  <input type="text" name="Userid" required>
+  <br>
+  Email:<br>
+  <input type="text" name="emailid" required>
+  <br>
+  Password:<br>
+  <input type="password" name="password1"  maxlength="10" required>
+ <br>
+  Confirm Password:<br>
+  <input type="password" name="password2"  maxlength="10" required>
+  <br>
+  Mobile no:<br>
+  <input type="number" name="mbno" required>
+  <br><br>
+  <input type="submit" value="Sign Up" required>
+</form>
+</center>
+
+
+
+
+</BODY>
+
+</HTML>
