@@ -1,17 +1,19 @@
 <?php
 class db
 {
-	private static $_inst=null;
+private static $_inst=null;
 
 private  $_pdo,
-$msg ="Hello";
+$msg ="Hello",
+$_query,
+$_results;
 private function __construct()
 {
 		$user ="root";
 		$password="";
 	try
 	{
-	$_pdo= new PDO('mysql: host=localhost ;dbname=sellengine',$user,$password);
+	$this->_pdo= new PDO('mysql: host=localhost ;dbname=sellengine',$user,$password);
 	}
 	catch(PDOException $e)
 	{
@@ -30,11 +32,29 @@ private function __construct()
 		return self::$_inst;
 	}
 
-
-	public function disp()
+	public function setquery($query)
 	{
-		echo $this->msg;
+		echo "<br>",$query;
+			if($this->_query=$this->_pdo->prepare($query))
+			{
+				try
+				{
+					if($this->_query->execute())
+					{
+						$this->_results=$this->_query->fetchAll(PDO::FETCH_OBJ);
+
+						return $this->_results;
+					}
+				}
+				catch(PDOException $e)
+				{
+					echo $e->getMessage();
+				}
+			}
+			return false;
 	}
+
+	
 }
 
 
