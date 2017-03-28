@@ -6,25 +6,38 @@ $user= new user();
 
 if(input::exists())
 { 
+	
+	
+     	
      if(!is_null(input::get('id')))
      {
+     	if(token::check('token_log',input::get('token_log')))
+     	{
+     		//echo "Logged In";
+	
+     	}
   		
-     }
+  	}
      else if(!is_null(input::get('first_name')))
      {
-     	if(input::get('pass_reg')===input::get('pass_reg_again'))
+     	if(token::check('token_reg',input::get('token_reg')))
      	{
-     	$user->register('users',array(
-     		'first_name'=>input::get('first_name'),
-     		'last_name'=>input::get('last_name'),
-     		'email'=>input::get('email'),
-     		'password'=>input::get('pass_reg'),
-     		'number'=>input::get('number')
+     	if(input::get('pass_reg')===input::get('pass_reg_again'))
+     		{
+	     	$user->register('users',array(
+	     		'first_name'=>input::get('first_name'),
+	     		'last_name'=>input::get('last_name'),
+	     		'email'=>input::get('email'),
+	     		'password'=>input::get('pass_reg'),
+	     		'number'=>input::get('number')
      		));
-   
-     }
+     		echo "Registered <br>";
+   			}
+     	}
+ 		}
 
-		}
+		
+	
 }
 
 ?>
@@ -104,8 +117,9 @@ if(input::exists())
             </label>
             <input type="password" name="pass_reg_again" required autocomplete="off"/>
           </div>
+       
           <button type="submit" class="button button-block"/>Get Started</button>
-          
+           <input type="hidden" name="token_reg"  id="token_reg" value="<?php echo token::generate('token_reg') ?>">
           </form>
 
         </div>
@@ -128,11 +142,11 @@ if(input::exists())
             </label>
             <input type="password"  name="pass_login" required autocomplete="off"/>
           </div>
-          
+         
           <p class="forgot"><a href="#">Forgot Password?</a></p>
           
           <button class="button button-block"/>Log In</button>
-          
+           <input type="hidden" name="token_log"  id="token_log" value="<?php echo token::generate('token_log') ?>">
           </form>
 
         </div>
