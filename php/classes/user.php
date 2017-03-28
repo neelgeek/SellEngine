@@ -35,7 +35,5 @@ public function register($table,$fields)
 	}
 }
 
-public function get()
-
 }
 ?>

@@ -34,7 +34,7 @@ private function __construct()
 
 	public function setquery($query)
 	{
-		echo "<br>",$query;
+		
 			if($this->_query=$this->_pdo->prepare($query))
 			{
 				try

@@ -32,16 +32,17 @@ class input
 		}
 	}
 
-	public function get($field)
+	public function get($item)
 	{
-		if(!empty($_POST))
+		if(isset($_POST[$item]))
 		{
-			return $_POST[$field];
+			return $_POST[$item];
 		}
-		else if(!empty($_GET))
+		else if(isset($_GET[$item]))
 		{
-			return $_GET[$field];
+			return $_GET[$item];
 		}
+		return null;
 
 	}
 
