@@ -1,6 +1,12 @@
 
-<php?
-require_once 'php\init.php';
+<?php
+
+require_once 'php/init.php';
+if(input::exists())
+{
+
+	echo "HELLO";
+}
 
 
 ?>
@@ -37,7 +43,7 @@ require_once 'php\init.php';
         <div id="signup">   
           <h1>Sign Up for Free</h1>
           
-          <form action="/" method="post">
+          <form action="" method="post">
           
           <div class="top-row">
             <div class="field-wrap">

@@ -1,6 +1,14 @@
 
-<php?
-require_once 'php\init.php';
+<?php
+
+require_once 'php/init.php';
+if(input::exists())
+{ 
+     if(!empty(input::get('id')))
+     {
+  
+     }
+}
 
 
 ?>
@@ -20,7 +28,7 @@ require_once 'php\init.php';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
   
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="sign-up-login-form/css/style.css">
 
   
 </head>
@@ -37,48 +45,48 @@ require_once 'php\init.php';
         <div id="signup">   
           <h1>Sign Up for Free</h1>
           
-          <form action="/" method="post">
+          <form action="" method="post">
           
           <div class="top-row">
             <div class="field-wrap">
               <label>
                 First Name<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" />
+              <input type="text" name='first_name' required autocomplete="off" />
             </div>
         
             <div class="field-wrap">
               <label>
                 Last Name<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off"/>
+              <input type="text"  name='last_name' required autocomplete="off"/>
             </div>
           </div>
 			<div class="field-wrap">
               <label>
                 Number<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off"/>
+              <input type="text" name="number" required autocomplete="off"/>
             </div>
           <div class="field-wrap">
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="email"  name="email" required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
             <label>
                Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input type="password"  name="pass_reg" required autocomplete="off"/>
           </div>
           
 		  <div class="field-wrap">
             <label>
                Confirm Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input type="password" name="pass_reg_again" required autocomplete="off"/>
           </div>
           <button type="submit" class="button button-block"/>Get Started</button>
           
@@ -89,20 +97,20 @@ require_once 'php\init.php';
         <div id="login">   
           <h1>Welcome Back!</h1>
           
-          <form action="/" method="post">
+          <form action="" method="post">
           
             <div class="field-wrap">
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="email" name="id" required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input type="password"  name="pass_login" required autocomplete="off"/>
           </div>
           
           <p class="forgot"><a href="#">Forgot Password?</a></p>
@@ -118,7 +126,7 @@ require_once 'php\init.php';
 </div> <!-- /form -->
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-    <script src="js/index.js"></script>
+    <script src="sign-up-login-form/js/index.js"></script>
 
 </body>
 </html>
