@@ -13,8 +13,7 @@ if(input::exists())
      {
      	if(token::check('token_log',input::get('token_log')))
      	{
-     		//echo "Logged In";
-	
+     		$user->login(input::get('id'),input::get('pass_login'));
      	}
   		
   	}
@@ -24,14 +23,22 @@ if(input::exists())
      	{
      	if(input::get('pass_reg')===input::get('pass_reg_again'))
      		{
+     			if($user->getData('users',array('username'=>input::get('reg_id')))->count()===0)
+     			{
 	     	$user->register('users',array(
+	     		'username'=>input::get('reg_id'),
 	     		'first_name'=>input::get('first_name'),
 	     		'last_name'=>input::get('last_name'),
 	     		'email'=>input::get('email'),
 	     		'password'=>input::get('pass_reg'),
 	     		'number'=>input::get('number')
      		));
-     		echo "Registered <br>";
+	     }
+	     else
+	     {
+	     	echo "Username Already Exists";
+	     }
+     		
    			}
      	}
  		}
@@ -77,6 +84,12 @@ if(input::exists())
           <form action="" method="post">
           
           <div class="top-row">
+          <div class="field-wrap">
+            <label>
+              Username <span class="req">*</span>
+            </label>
+            <input type="text" name="reg_id" required autocomplete="off"/>
+          </div>
             <div class="field-wrap">
               <label>
                 First Name<span class="req">*</span>
@@ -133,7 +146,7 @@ if(input::exists())
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email" name="id" required autocomplete="off"/>
+            <input type="text" name="id" required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
