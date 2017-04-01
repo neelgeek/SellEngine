@@ -2,11 +2,18 @@
 
 class user
 {
-private $_db;
+private $_db,
+$_isLoggedIn;
 
 public function __construct()
 {
 $this->_db = db::getInstance();
+
+	if(session::exists('user'))
+	{
+		$this->_isLoggedIn = true;
+	}
+
 }
 
 public function register($table,$fields)
@@ -35,31 +42,19 @@ public function register($table,$fields)
 	}
 }
 
-	public function getData($table,$values=array())
+	public function find($username)
 	{
-		$sub2=array_keys($values);
-		
-		$sub1 = '';
-		$x=0;
-		foreach ($values as $value) {
-			if($x<count($values)-1)
-			{
-				$sub1.= $sub2[$x].' = '."'".$value."'".' AND ';
-				$x++;
-			}
-			else
-			{
-			$sub1.=$sub2[$x].' = '."'".$value."'";
-		    }
-
+		$data=$this->_db->getData('users',array('username'=>$username));
+		if($data->count())
+		{
+			return $data;
 		}
-		 $query = "SELECT * FROM {$table} WHERE {$sub1}";
-		return $this->_db->setquery($query);
+		return false;
 	}
 
 	public function login($username,$password)
 	{
-			$log_data= $this->getData('users',array(
+			$log_data= $this->_db->getData('users',array(
      		'username'=>$username
      		));
      	if(!$log_data->error())
@@ -69,7 +64,9 @@ public function register($table,$fields)
      			
      			if($log_data->results()[0]->password===input::get('pass_login'))
      			{
-     				echo "Logged In !";
+     				
+     				session::put('user',$log_data->results()[0]->username);
+     				header('location: index.php');
      			}
      			else
      			{
@@ -78,6 +75,11 @@ public function register($table,$fields)
      			}
      		}
      	}
+	}
+
+	public function IsLoggedIn()
+	{
+		return $this->_isLoggedIn;
 	}
 }
 ?>

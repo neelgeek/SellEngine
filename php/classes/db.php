@@ -60,6 +60,28 @@ private function __construct()
 			}
 			return $this;
 	}
+
+	public function getData($table,$values=array())
+	{
+		$sub2=array_keys($values);
+		
+		$sub1 = '';
+		$x=0;
+		foreach ($values as $value) {
+			if($x<count($values)-1)
+			{
+				$sub1.= $sub2[$x].' = '."'".$value."'".' AND ';
+				$x++;
+			}
+			else
+			{
+			$sub1.=$sub2[$x].' = '."'".$value."'";
+		    }
+
+		}
+		 $query = "SELECT * FROM {$table} WHERE {$sub1}";
+		return $this->setquery($query);
+	}
 	
 	public function error()
 	{
