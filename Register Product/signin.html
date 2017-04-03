@@ -5,29 +5,47 @@
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
 </head>
 <body >
-  <div class="container">
-    <p>AD PAGE</p>
-    <form method="post" name="form">
-      <div class="form-input">
-        <p id="para">Product title:</p>
-       <input type="text" name="Product title">
-     </br>
-       <p id="para">Product type:</p>
-      <input type="text" name="Product type">
-    </br>
-       <p id="para">state:</p>
-      <input type="text" name="State">
-    </br>
-       <p id="para">City:</p>
-      <input type="text" name="City">
-    </br>
-       <p id="para">Product Description:</p>
+  <div class="form">
+  <h1>AD PAGE</h1>
+    <form method="post" name="myForm">
+       <div class="field-wrap">
+              <label>
+                Product Title<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+			  <div class="field-wrap">
+			 <label for="list">Product Type</label>
+			 </div>
+      <select form_id="myForm" class="field-wrap"  id="list" name="list">
+		<option value=""></option>
+	 <option value="volvo">Volvo</option>
+	  <option value="saab">Saab</option>
+	  <option value="opel">Opel</option>
+	  <option value="audi">Audi</option>
+</select>
+   <div class="field-wrap">
+              <label>
+                Price<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+      <div class="field-wrap">
+              <label>
+                City<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+       <div class="field-wrap">
+              <label>
+                Product Description<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
       <textarea></textarea>
-
-    </br>
-      </div>
-      <input type="button" name="POST" value="POST" class="btn-login">
-    </form>
+	  </div>
+	 <button type="submit" class="button button-block"/>POST</button>
+	  <button type="submit" class="button button-block"/>BACK</button>
+	</form>
   </div>
 </body>
 </html>
