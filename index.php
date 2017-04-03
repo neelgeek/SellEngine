@@ -1,12 +1,24 @@
 <?php
 require_once 'php/init.php';
 $user=new user();
+$prod = new product();
 $LoggedIn=false;
 if($user->IsLoggedIn())
 {
-  echo "Welcome";
+  echo "Welcome ",$user->data()->username;
   $LoggedIn=true;
 }
+
+// if($prod->search(array(
+//   'descp'=>'e'
+//   )))
+// {
+//   $res=$prod->results();
+//   foreach ($res as $value) 
+//   {
+//     echo "<br>" ,$value->title;
+//   }
+// }
 
 ?>
 
@@ -59,8 +71,8 @@ if($user->IsLoggedIn())
 <p align="center"><b>Welcome to the site where you can sell and buy used goods within minutes.</b></p>
 <br>
 <br>
-<form align="center">
-<input type="text" placeholder="Search..." maxlength="25" id="search">
+<form align="center" method="get" action='search.php'>
+<input type="text" name='title' placeholder="Search..." maxlength="25" id="search">
 <input type="submit" value="Go!" id="submit">
 </form>
 <br>

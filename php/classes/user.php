@@ -3,15 +3,25 @@
 class user
 {
 private $_db,
-$_isLoggedIn;
+$_isLoggedIn,
+$_data;
 
 public function __construct()
 {
 $this->_db = db::getInstance();
 
 	if(session::exists('user'))
-	{
+	{	
+
+		$user= session::get('user');
+		if($this->find($user))
+		{
 		$this->_isLoggedIn = true;
+		}
+		else
+		{
+			$this->logout();
+		}
 	}
 
 }
@@ -44,10 +54,11 @@ public function register($table,$fields)
 
 	public function find($username)
 	{
-		$data=$this->_db->getData('users',array('username'=>$username));
+		$data=$this->_db->getData('users',array('user_id'=>$username));
 		if($data->count())
 		{
-			return $data;
+			$this->_data=$data->results()[0];
+			return true;
 		}
 		return false;
 	}
@@ -64,8 +75,7 @@ public function register($table,$fields)
      			
      			if($log_data->results()[0]->password===input::get('pass_login'))
      			{
-     				
-     				session::put('user',$log_data->results()[0]->username);
+     				session::put('user',$log_data->results()[0]->user_id);
      				header('location: index.php');
      			}
      			else
@@ -90,6 +100,11 @@ public function register($table,$fields)
 	public function logout()
 	{
 		session::delete('user');
+	}
+
+	public function data()
+	{
+		return $this->_data;
 	}
 }
 
