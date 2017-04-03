@@ -123,5 +123,26 @@ textarea {
 
 .button-block {
   display:inline-block;
-  width: 100%;
+  width: 30%;
+}
+.container{
+    text-align: right;
+}
+form.myForm {
+  input, textarea {
+    padding: 12px 12px 12px 12px; 
+  }
+  label {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  input:focus, textarea:focus,select:focus {
+    padding: 4px 6px 20px 6px; 
+  }
+  input:focus + label, textarea:focus + label ,select:focus + label{
+    top: 100%;
+    margin-top: -16px;
+  }
 }
