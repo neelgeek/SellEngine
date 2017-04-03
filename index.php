@@ -1,17 +1,18 @@
 <?php
 require_once 'php/init.php';
 $user=new user();
-
+$LoggedIn=false;
 if($user->IsLoggedIn())
 {
   echo "Welcome";
+  $LoggedIn=true;
 }
 
 ?>
 
 
 
-<!DOCKTYPE html>
+
 <!-- SellEngine.html By Neel,Aniket,Monis,Kalpesh -->
 <html lang='en'>
 <head>
@@ -28,9 +29,26 @@ if($user->IsLoggedIn())
     <h1><a href="index.html"><img src="homepage/logo1.png">SELL ENGINE</a></h1>
 	<ul>
 	<li id="active"><a href="index.html"><b>Home</b></a></li>
-	<li><a href="signin.html"><b>Sell</b></a></li>
+
+	<?php 
+  if(!$LoggedIn)
+  {
+  ?>
+  <li><a href="login.php"><b>Login/Signup</b></a></li> 
+  <?php
+  }
+  ?>
+<?php
+    if($LoggedIn)
+  {
+  ?>
+  	<li><a href="register.php"><b>Sell</b></a></li>
 	<li><a href="buy.html"><b>Buy</b></a></li>
-	<li><a href="login.php"><b>Login/Signup</b></a></li> 
+  <li><a href="login.php"><b>Logout</b></a></li> 
+  <?php
+  }
+  ?>
+
 	<li><a href="about.html"><b>About</b></a></li>
 	</ul>
 </div>

@@ -38,7 +38,7 @@ public function register($table,$fields)
 
 	if(!$this->_db->setquery($query)->error())
 	{
-		echo "Data entered";
+	header('location: index.php');
 	}
 }
 
@@ -74,12 +74,23 @@ public function register($table,$fields)
 
      			}
      		}
+     		else
+     	{
+     		echo "Username Dosent Exists !";
      	}
+     	}
+
 	}
 
 	public function IsLoggedIn()
 	{
 		return $this->_isLoggedIn;
 	}
+
+	public function logout()
+	{
+		session::delete('user');
+	}
 }
+
 ?>
