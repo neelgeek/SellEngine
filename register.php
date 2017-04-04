@@ -3,7 +3,9 @@ require_once 'php/init.php';
 
 $prod = new product();
 
-
+$user=new user();
+if($user->IsLoggedIn())
+{
 if(input::exists('post'))
 {
 if(token::check('token',input::get('token')))
@@ -18,6 +20,11 @@ if(token::check('token',input::get('token')))
     ));   
 }
 
+}
+}
+else
+{
+  header('location: index.php');
 }
 ?>
 

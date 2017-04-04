@@ -9,17 +9,6 @@ if($user->IsLoggedIn())
   $LoggedIn=true;
 }
 
-// if($prod->search(array(
-//   'descp'=>'e'
-//   )))
-// {
-//   $res=$prod->results();
-//   foreach ($res as $value) 
-//   {
-//     echo "<br>" ,$value->title;
-//   }
-// }
-
 ?>
 
 
