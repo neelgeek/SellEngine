@@ -371,16 +371,19 @@ body {font-family: 'raleway',sans-serif;}
 	width: 85%;
 	border: 2px solid black;
 	margin:  auto;
-	height: 70%;
+	height: 80%;
 	
 		
 }
 
 div.content{
 	
-	height: 30px;
+	height: 60px;
 	width: 960px;
-	border: 0.5px solid ;
+	border: 2px solid ;
 	float: center;
 	margin: 5px;
+	margin-top: 20px;
+	text-align: absolute;
+	
 }
