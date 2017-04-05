@@ -27,7 +27,7 @@ if(input::exists())
      	{
      	if(input::get('pass_reg')===input::get('pass_reg_again'))
      		{
-     			if(!$user->find(input::get('reg_id')))
+     			if($user->find(input::get('reg_id')))
      			{
 	     	$user->register('users',array(
 	     		'username'=>input::get('reg_id'),
@@ -36,6 +36,7 @@ if(input::exists())
 	     		'email'=>input::get('email'),
 	     		'password'=>input::get('pass_reg'),
 	     		'number'=>input::get('number')
+
      		));
 	     }
 	     else
@@ -44,6 +45,10 @@ if(input::exists())
 	     }
      		
    			}
+        else
+        {
+          echo "Password Does Not Match";
+        }
      	}
  		}
 

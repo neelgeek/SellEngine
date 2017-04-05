@@ -1,11 +1,12 @@
 <?php
 require_once 'php/init.php';
+echo session::flash('home');
 $user=new user();
+
 $prod = new product();
 $LoggedIn=false;
 if($user->IsLoggedIn())
 {
-  echo "Welcome ",$user->data()->username;
   $LoggedIn=true;
 }
 

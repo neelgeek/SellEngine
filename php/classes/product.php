@@ -35,12 +35,13 @@ class product
 		}
 		$x++;
 	}
-	 echo $query="INSERT into products (`" . implode('` , `', $keys) . "`) VALUES ({$values}) ";
+	 $query="INSERT into products (`" . implode('` , `', $keys) . "`) VALUES ({$values}) ";
 
 
 	if(!$this->_db->setquery($query)->error())
 	{
-	echo "Product Registered Sucessfully";
+	session::flash('home','Product Registered Sucessfully !');
+	header('location: index.php');
 	}
  }
 

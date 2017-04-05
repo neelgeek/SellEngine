@@ -1,8 +1,9 @@
 <?php
 require_once 'php/init.php';
 
-$prod = new product();
+echo session::flash('register');
 
+$prod = new product();
 $user=new user();
 if($user->IsLoggedIn())
 {

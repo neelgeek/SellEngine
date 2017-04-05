@@ -48,6 +48,7 @@ public function register($table,$fields)
 
 	if(!$this->_db->setquery($query)->error())
 	{
+	session::flash('home','User Registered Successfully ! You may now Login');
 	header('location: index.php');
 	}
 }

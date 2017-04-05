@@ -38,7 +38,7 @@
 					</div>
 					<div class="col-md-6 det-desc">
 						<div class="productdata">
-							<div class="infospan">Model <span>HHH</span></div>
+							<div class="infospan">Model <span>PT - 3</span></div>
 							<div class="infospan">Item no <span>2522</span></div>
 							<div class="infospan">Manufacturer <span>Nikon</span></div>
 							<div class="average">

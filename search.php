@@ -48,10 +48,10 @@ else
 
 <body>
 <div id="nav1">
-    <h1><a href="homepage2.html"><img src="Homepage/logo1.png">SELL ENGINE</a></h1>
+    <h1><a href="index.php"><img src="Homepage/logo1.png">SELL ENGINE</a></h1>
 	<ul>
-	<li id="active"><a href="homepage2.html"><b>Home</b></a></li>
-	<li><a href="signin.html"><b>Sell</b></a></li>
+	<li id="active"><a href="index.php"><b>Home</b></a></li>
+	<li><a href="register.php"><b>Sell</b></a></li>
 	
 	<li><a href="login.php"><b>Logout</b></a></li> 
 	<li><a href="about.html"><b>About</b></a></li>
@@ -87,7 +87,12 @@ maxlength="25" id="search">
   {
   foreach ($res as $result) {
   	?>
-   <div class="content" id="first"><?php echo $result->title; ?></div>
+   <div class="content" id="first">
+   <a href="BuyPage/BuyPage.php?id=<?php echo $result->prod_id; ?>"><?php echo $result->title; ?></a>
+   	<div>
+   	<?php echo $result->price; ?>
+   	</div>
+   </div>
    <?php
   }
 }
@@ -105,7 +110,7 @@ else
 </div>
 
 <div id="footer">
-<h3><br>Copyrights &copy.SellEngine 2017.All Rights Reserved.</h3>
+<h3><br>Project Developed by Aniket,Neel,Monis and Kalpesh</h3>
 </div>
 </body>
 </html>
