@@ -48,11 +48,8 @@ else
               </label>
               <input type="text" name='title' id='title' required autocomplete="off" />
             </div>
-        <div class="field-wrap">
-       <label for="list">Product Type</label>
-       </div>
       <select form_id="myForm" class="field-wrap"  id="type" name="type">
-    <option value=""></option>
+    <option value="" disabled="disabled" selected="selected">Please select a category</option>
    <option value="Electronics">Electronics</option>
     <option value="Mobiles">Mobiles</option>
     <option value="Vehicals">Vehicals</option>
@@ -83,5 +80,8 @@ else
     <button class="button button-block"/><a href='index.php'>BACK</a></button>
   </form>
   </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="register.js"></script>
 </body>
 </html>
