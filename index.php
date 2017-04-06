@@ -45,7 +45,7 @@ if($user->IsLoggedIn())
   {
   ?>
   	<li><a href="register.php"><b>Sell</b></a></li>
-	<li><a href="buy.html"><b>Buy</b></a></li>
+	
   <li><a href="login.php"><b>Logout</b></a></li> 
   <?php
   }

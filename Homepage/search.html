@@ -1,31 +1,4 @@
-
-<?php
-require_once 'php/init.php';
-$prod = new product();
-if(input::exists('get'))
-{
- $title = $_GET['title'];
-if($prod->search(array('title'=>$title)))
-{
-  $res=$prod->results();
-  foreach ($res as $value) 
-  {
-    echo "<br>" ,$value->title;
-    echo "<br>" ,$value->price;
-  }
-}
-else
-{
-	echo "No Result Found !";
-}
-}
-
-?>
-
-
-
-
-
+<!DOCKTYPE html>
 <!-- SellEngine.html By Neel,Aniket,Monis,Kalpesh -->
 <html lang='en'>
 <head>
@@ -46,6 +19,7 @@ else
 	
 	<li><a href="index.html"><b>Login/Signup</b></a></li> 
 	<li><a href="about.html"><b>About</b></a></li>
+	<li><a href="user.html"><b>User</b></a></li>
 	</ul>
 </div>
 
