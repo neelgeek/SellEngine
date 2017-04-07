@@ -30,16 +30,16 @@ $prod = new product();
 					<div class="col-md-6">
 						<div class="dt-img">
 							<div class="detpricetag"><div class="inner">$199</div></div>
-							<a class="fancybox" href="images/sample-1.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/sample-1.jpg" alt="" class="img-responsive" /></a>
+							<a class="fancybox" href="Images/sample-1.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/sample-1.jpg" alt="" class="img-responsive" /></a>
 						</div>
 						<div class="thumb-img">
-							<a class="fancybox" href="images/sample-4.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/sample-4.jpg" alt="" class="img-responsive" /></a>
+							<a class="fancybox" href="Images/sample-4.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/sample-4.jpg" alt="" class="img-responsive" /></a>
 						</div>
 						<div class="thumb-img">
-							<a class="fancybox" href="images/sample-5.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/sample-5.jpg" alt="" class="img-responsive" /></a>
+							<a class="fancybox" href="Images/sample-5.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/sample-5.jpg" alt="" class="img-responsive" /></a>
 						</div>
 						<div class="thumb-img">
-							<a class="fancybox" href="images/sample-1.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/sample-1.jpg" alt="" class="img-responsive" /></a>
+							<a class="fancybox" href="Images/sample-1.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/sample-1.jpg" alt="" class="img-responsive" /></a>
 						</div>
 					</div>
 					<div class="col-md-6 det-desc">
