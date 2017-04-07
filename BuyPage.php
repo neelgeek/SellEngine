@@ -1,4 +1,6 @@
 <?php
+require_once 'php/init.php';
+$prod = new product();
 
 ?>
 
@@ -28,7 +30,6 @@
 					<div class="col-md-6">
 						<div class="dt-img">
 							<div class="detpricetag"><div class="inner">$199</div></div>
-					
 							<a class="fancybox" href="images/sample-1.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/sample-1.jpg" alt="" class="img-responsive" /></a>
 						</div>
 						<div class="thumb-img">
@@ -43,7 +44,7 @@
 					</div>
 					<div class="col-md-6 det-desc">
 						<div class="productdata">
-							<div class="infospan">Model <span>ijiskjfns</span></div>
+							<div class="infospan">Model <span>HHH</span></div>
 							<div class="infospan">Item no <span>2522</span></div>
 							<div class="infospan">Manufacturer <span>Nikon</span></div>
 							<div class="average">
