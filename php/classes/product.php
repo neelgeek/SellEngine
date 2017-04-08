@@ -10,10 +10,15 @@ class product
  private $_db=null,
  		$_results;
 
- public function __construct()
+ public function __construct($id=null)
  {
 
  	$this->_db=db::getInstance();
+
+ 	if(!is_null($id))
+ 	{
+ 		$this->find($id);
+ 	}
 
  }
 
@@ -91,10 +96,8 @@ public function search($filters= array())
 			$this->_results=$searchResults->results();
 			return true;
 		}
-		else
-		{
 			return false;
-		}
+		
 	
 	
 }
@@ -102,6 +105,21 @@ public function search($filters= array())
 	public function results()
 	{
 		return $this->_results;
+	}
+
+	public function find($id)
+	{
+		$query = "SELECT * FROM products WHERE prod_id='{$id}'";
+		$searchResults =$this->_db->setquery($query);
+		if($searchResults->count())
+		{
+			$this->_results=$searchResults->results();
+			return true;
+		}
+		
+			return false;
+		
+	
 	}
 
 

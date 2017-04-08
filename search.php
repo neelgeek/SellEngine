@@ -88,7 +88,7 @@ maxlength="25" id="search">
   foreach ($res as $result) {
   	?>
    <div class="content" id="first">
-   <a href="BuyPage/BuyPage.php?id=<?php echo $result->prod_id; ?>"><?php echo $result->title; ?></a>
+   <a href="BuyPage.php?id=<?php echo $result->prod_id; ?>"><?php echo $result->title; ?></a>
    	<div>
    	<?php echo $result->price; ?>
    	</div>

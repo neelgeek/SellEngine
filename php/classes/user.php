@@ -107,6 +107,28 @@ public function register($table,$fields)
 	{
 		return $this->_data;
 	}
+
+	public function update($fields,$id)
+	{
+	$set='';
+		$x=1;
+
+		foreach ($fields as $name => $value) {
+
+			$set.="{$name} = {$value} ";
+			if($x<count($fields))
+			{
+				$set.=", ";
+			}
+		}
+
+		 $query= "UPDATE users set {$set} WHERE user_id= {$id}";
+		if(!$this->_db->setquery($query)->error())
+		{
+			return true;
+		}
+		return false;
+	}
 }
 
 ?>
