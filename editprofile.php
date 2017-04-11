@@ -1,5 +1,6 @@
 <?php
 require_once 'php/init.php';
+echo session::flash('edit');
 $user = new user();
 $data;
 if($user->IsLoggedIn())
@@ -9,6 +10,7 @@ if($user->IsLoggedIn())
     {
       if(token::check('token',input::get('token')))
       {
+
         if($user ->update(array(
           'first_name'=> input::get('first_name'),
           'last_name'=> input::get('last_name'),
@@ -16,7 +18,8 @@ if($user->IsLoggedIn())
           'email'=> input::get('email')
           ),$data->user_id))
         {
-      echo "Info Updated";
+      session::flash('edit',"Info Edited Sucessfully !");
+      header("location: editprofile.php");
       
     }
       }
@@ -88,7 +91,7 @@ else
 		
 		 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-    <script src="js/index.js"></script>
+    <script src="EditProfile/js/index.js"></script>
 
 </body>
 </html>

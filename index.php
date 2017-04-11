@@ -44,7 +44,7 @@ if($user->IsLoggedIn())
     if($LoggedIn)
   {
   ?>
-  	 <li><a href="signin.html"><b>Sell</b></a></li> 
+  	 <li><a href="register.php"><b>Sell</b></a></li> 
     
   <li><a href="user.html"><b>Welcome <?php echo $user->data()->username; ?></b><img src="Homepage/user.png"></a>
   

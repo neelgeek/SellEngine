@@ -27,7 +27,7 @@ if(input::exists())
      	{
      	if(input::get('pass_reg')===input::get('pass_reg_again'))
      		{
-     			if($user->find(input::get('reg_id')))
+     			if(!$user->find(input::get('reg_id')))
      			{
 	     	$user->register('users',array(
 	     		'username'=>input::get('reg_id'),

@@ -110,22 +110,25 @@ public function register($table,$fields)
 
 	public function update($fields,$id)
 	{
-	$set='';
-		$x=1;
-
+		$set='';
+		$y=1;
+		//echo count($fields);
 		foreach ($fields as $name => $value) {
 
-			$set.="{$name} = {$value} ";
-			if($x<count($fields))
+			$set.="{$name} = '{$value}' ";
+			if($y<count($fields))
 			{
 				$set.=", ";
 			}
+			$y++;
 		}
 
-		 $query= "UPDATE users set {$set} WHERE user_id= {$id}";
+		 $query= "UPDATE users SET {$set} WHERE user_id = '{$id}'";
+		
 		if(!$this->_db->setquery($query)->error())
 		{
 			return true;
+			
 		}
 		return false;
 	}
