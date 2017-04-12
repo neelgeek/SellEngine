@@ -6,7 +6,7 @@ if($user->IsLoggedIn())
 {
   $user->logout();
   header('location: index.php');
-  }
+}
 
 if(input::exists())
 { 
