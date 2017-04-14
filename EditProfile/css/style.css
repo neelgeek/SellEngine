@@ -144,7 +144,20 @@ textarea {
   width: 48%;
   margin-right: 4%;
 }
-.top-row > div:last-child {
+.toprow > div:last-child {
+  margin: 0;
+}
+.toprow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.toprow > div {
+  float: left;
+  width: 32%;
+  margin-right: 4%;
+}
+.toprow > div:last-child {
   margin: 0;
 }
 

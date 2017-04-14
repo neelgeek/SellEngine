@@ -46,11 +46,11 @@ if($user->IsLoggedIn())
   ?>
   	 <li><a href="register.php"><b>Sell</b></a></li> 
     
-  <li><a href="user.html"><b>Welcome <?php echo $user->data()->username; ?></b><img src="Homepage/user.png"></a>
+  <li><a><b>Welcome <?php echo $user->data()->username; ?></b><img src="Homepage/user.png"></a>
   
   <ul>
   <li><a href="editprofile.php"><b>Edit Profile</b></a></li>
-  <li><a href="test2.html"><b>My Ads</b></a></li>
+  <li><a href="list.php"><b>My Ads</b></a></li>
   <li><a href="login.php"><b>Logout</b></a></li> 
   </ul>
   <?php

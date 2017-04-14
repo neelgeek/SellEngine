@@ -47,9 +47,18 @@ else
 
 <body>
 <div class="form">
-   
+   <div class="toprow">
+<form>
+   <div class="field-wrap">
+   <input type="image" src="home.png" width="60" height="60">
+</form>
+</div>
+<div>
+<h1>Edit Profile</h1>
+</div>
+</div>
 <div id="signup">   
-          <h1>Edit Profile</h1>
+          
           
           <form action="" method="post">
           

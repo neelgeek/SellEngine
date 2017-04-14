@@ -64,7 +64,7 @@ public function search($filters= array())
 			{
 				if(is_numeric($value))
 				{
-				$sub1.= $sub2[$x].' <= '. $value .' AND ';
+				$sub1.= $sub2[$x].' = '. $value .' AND ';
 				}
 				else
 				{
@@ -76,7 +76,7 @@ public function search($filters= array())
 			{
 				if(is_numeric($value))
 				{
-				$sub1.= $sub2[$x].' <= '." $value ";
+				$sub1.= $sub2[$x].' = '. $value ;
 				}
 				else
 				{
@@ -86,7 +86,7 @@ public function search($filters= array())
 			$x++;	
 
 		}
-		 $query = "SELECT * FROM products WHERE {$sub1}";
+		  $query = "SELECT * FROM products WHERE {$sub1}";
 
 
 		$searchResults = $this->_db->setquery($query);
