@@ -146,3 +146,19 @@ form.myForm {
     margin-top: -16px;
   }
 }
+.top-row > div:last-child {
+  margin: 0;
+}
+.toprow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.toprow > div {
+  float: left;
+  width: 31%;
+  margin-right: 4%;
+}
+.toprow > div:last-child {
+  margin: 0;
+}
