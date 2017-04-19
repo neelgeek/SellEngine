@@ -2137,10 +2137,10 @@ background: rgba(19, 35, 47, 0.9);
 
 table{
 max-width: 500px;
-color: #fff;
+color: #000;
 font-size: 1.2em;
 border-width: thin;
-border-color: #fff;
+border-color: #000;
 border-style:solid;
 
 
@@ -2149,12 +2149,12 @@ border-style:solid;
 td{
   min-width: 130px;
   max-width: 250px;
-  border-color: #fff;
+  border-color: #000;
   padding: 1% 1%;
   overflow-wrap:break-word;
   border-style: solid;
   border-width: thin;
-  border-color:#fff;
+  border-color:#000;
 }
 
 .button5 {
