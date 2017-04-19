@@ -30,7 +30,7 @@ if($user->IsLoggedIn())
 <div id="nav1">
     <h1><a href="index.html"><img src="homepage/logo1.png">SELL ENGINE</a></h1>
 	<ul>
-	<li id="active"><a href="index.html"><b>Home</b></a></li>
+	<!-- <li id="active"><a href="index.html"><b>Home</b></a></li> -->
 
 	<?php 
   if(!$LoggedIn)
@@ -44,15 +44,19 @@ if($user->IsLoggedIn())
     if($LoggedIn)
   {
   ?>
-  	<li><a href="register.php"><b>Sell</b></a></li>
-	
+  	 <li><a href="register.php"><b>Sell</b></a></li> 
+    
+  <li><a><b>Welcome <?php echo $user->data()->username; ?></b><img src="Homepage/user.png"></a>
+  
+  <ul>
+  <li><a href="editprofile.php"><b>Edit Profile</b></a></li>
+  <li><a href="list.php"><b>My Ads</b></a></li>
   <li><a href="login.php"><b>Logout</b></a></li> 
+  </ul>
   <?php
   }
   ?>
 
-	<li><a href="about.html"><b>About</b></a></li>
-	</ul>
 </div>
 
 <div id="main-content">

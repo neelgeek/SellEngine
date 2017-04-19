@@ -50,11 +50,16 @@ else
 <div id="nav1">
     <h1><a href="index.php"><img src="Homepage/logo1.png">SELL ENGINE</a></h1>
 	<ul>
-	<li id="active"><a href="index.php"><b>Home</b></a></li>
+	
 	<li><a href="register.php"><b>Sell</b></a></li>
 	
-	<li><a href="login.php"><b>Logout</b></a></li> 
-	<li><a href="about.html"><b>About</b></a></li>
+	<li><a href="user.html"><b>Welcome <?php echo $user->data()->username; ?></b><img src="Homepage/user.png"></a>
+  
+  <ul>
+  <li><a href="editprofile.php"><b>Edit Profile</b></a></li>
+  <li><a href="test2.html"><b>My Ads</b></a></li>
+  <li><a href="login.php"><b>Logout</b></a></li> 
+  </ul>
 	</ul>
 </div>
 
@@ -88,7 +93,7 @@ maxlength="25" id="search">
   foreach ($res as $result) {
   	?>
    <div class="content" id="first">
-   <a href="BuyPage/BuyPage.php?id=<?php echo $result->prod_id; ?>"><?php echo $result->title; ?></a>
+   <a href="BuyPage.php?id=<?php echo $result->prod_id; ?>"><?php echo $result->title; ?></a>
    	<div>
    	<?php echo $result->price; ?>
    	</div>

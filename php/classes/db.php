@@ -39,11 +39,12 @@ private function __construct()
 		$this->_error=false;
 			if($this->_query=$this->_pdo->prepare($query))
 			{
+				//echo "<br>Prepared ",$query;
 				try
 				{
 					if($this->_query->execute())
 					{
-						
+						//echo "<br> executed ",$query;
 						$this->_results=$this->_query->fetchAll(PDO::FETCH_OBJ);
 						$this->_count=$this->_query->rowCount();
 						

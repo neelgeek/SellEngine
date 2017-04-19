@@ -17,7 +17,8 @@ if(token::check('token',input::get('token')))
     'type'=>input::get('type'),
     'price'=>input::get('price'),
     'city'=>input::get('city'),
-    'descp'=>input::get('descp')
+    'descp'=>input::get('descp'),
+    'user_id'=>$user->data()->user_id
     ));   
 }
 

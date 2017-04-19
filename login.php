@@ -6,7 +6,7 @@ if($user->IsLoggedIn())
 {
   $user->logout();
   header('location: index.php');
-  }
+}
 
 if(input::exists())
 { 
@@ -27,7 +27,7 @@ if(input::exists())
      	{
      	if(input::get('pass_reg')===input::get('pass_reg_again'))
      		{
-     			if($user->find(input::get('reg_id')))
+     			if(!$user->find(input::get('reg_id')))
      			{
 	     	$user->register('users',array(
 	     		'username'=>input::get('reg_id'),
@@ -82,11 +82,41 @@ if(input::exists())
   <div class="form">
       
       <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Sign Up</a></li>
-        <li class="tab"><a href="#login">Log In</a></li>
+        <li class="tab active"><a href="#login">Log In</a></li>
+        <li class="tab "><a href="#signup">Sign Up</a></li>
+      
       </ul>
       
       <div class="tab-content">
+
+          <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form action="" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="text" name="id" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"  name="pass_login" required autocomplete="off"/>
+          </div>
+         
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          
+          <button class="button button-block"/>Log In</button>
+           <input type="hidden" name="token_log"  id="token_log" value="<?php echo token::generate('token_log') ?>">
+          </form>
+
+        </div>
+        
+
         <div id="signup">   
           <h1>Sign Up for Free</h1>
           
@@ -147,32 +177,6 @@ if(input::exists())
 
         </div>
         
-        <div id="login">   
-          <h1>Welcome Back!</h1>
-          
-          <form action="" method="post">
-          
-            <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="text" name="id" required autocomplete="off"/>
-          </div>
-          
-          <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input type="password"  name="pass_login" required autocomplete="off"/>
-          </div>
-         
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
-          
-          <button class="button button-block"/>Log In</button>
-           <input type="hidden" name="token_log"  id="token_log" value="<?php echo token::generate('token_log') ?>">
-          </form>
-
-        </div>
         
       </div><!-- tab-content -->
       
