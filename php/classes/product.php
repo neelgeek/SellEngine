@@ -122,6 +122,17 @@ public function search($filters= array())
 	
 	}
 
+	public function	 delete($id)
+	{
+			$query="DELETE FROM products WHERE prod_id={$id} ";
+
+			$result=$this->_db->setquery($query);
+			if($result->count())
+			{
+				return true;
+			}
+			return false;
+	}
 
 }
 

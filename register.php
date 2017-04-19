@@ -40,6 +40,13 @@ else
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
 </head>
 <body >
+<div class="form">
+  <form action="index.php" method="post" >
+<div class="toprow">
+<div class="field-wrap">
+<input type="image" src="image/home.png" alt="Submit" style="width:60px;height:60px">
+</form>
+</div>
   <div class="form">
   <h1>AD PAGE</h1>
     <form method="post" name="myForm">

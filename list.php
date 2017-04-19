@@ -2,7 +2,8 @@
 require_once 'php/init.php';
 
 $user= new user();
-
+$error=false;
+echo session::flash('list');
 if($user->IsLoggedIn())
 {
   $prod = new product();
@@ -11,6 +12,10 @@ if($user->IsLoggedIn())
     ));
 
   $result = $prod->results();
+  if(count($result>0))
+  {
+      $error=true;
+  }
   // echo count($result);
 }
 
@@ -27,6 +32,8 @@ if($user->IsLoggedIn())
   <h1>My Ads List</h1>
   <ol>
   <?php
+  if(!$error)
+  {
   foreach ($result as $value) 
   {
   ?>
@@ -34,9 +41,19 @@ if($user->IsLoggedIn())
 
     <?php
   }
+}
+else
+{
   ?>
+  <a href="register.php"><?php echo "No Ads Posted By You,Click here to POST NOW !";?></a>
+
+  <?php 
+}
+?>
+
 
     </ol>
+}
 
 </div>
 </body>

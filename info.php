@@ -3,7 +3,18 @@ require_once 'php/init.php';
 $prod_id = $_GET['id'];
 $user = new user();
 $prod = new product();
+if(input::exists())
+{
+  $id=input::get('id');
+  if($prod->delete($id))
+  {
+    session::flash('list','Product Deleted!');
+    header('location: list.php');
+  }
 
+}
+else
+{
 if($user->IsLoggedIn())
 {
   $prod->find($prod_id);
@@ -12,7 +23,7 @@ if($user->IsLoggedIn())
   
 
 }
-
+}
 ?>
 <html>
 <head>
@@ -47,7 +58,9 @@ if($user->IsLoggedIn())
     </tr>
 </table>
 </center>
-<button type="submit">DELETE</button>
+<form action="" method='post'>
+<!-- <input type="hidden" name="id" value=" <?php echo $results->prod_id ?>"  > -->
+<button type="submit" name="delete" id='delete'>DELETE</button></form>
 </div>
 </body>
 </html>
