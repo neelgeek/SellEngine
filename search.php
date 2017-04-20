@@ -50,15 +50,15 @@ else
 <div id="nav1">
     <h1><a href="index.php"><img src="Homepage/logo1.png">SELL ENGINE</a></h1>
 	<ul>
-	
+
 	<li><a href="register.php"><b>Sell</b></a></li>
-	
+
 	<li><a href="user.html"><b>Welcome <?php echo $user->data()->username; ?></b><img src="Homepage/user.png"></a>
-  
+
   <ul>
   <li><a href="editprofile.php"><b>Edit Profile</b></a></li>
   <li><a href="list.php"><b>My Ads</b></a></li>
-  <li><a href="login.php"><b>Logout</b></a></li> 
+  <li><a href="login.php"><b>Logout</b></a></li>
   </ul>
 	</ul>
 </div>
@@ -70,11 +70,11 @@ else
 <input type="text" name="title" placeholder="<?php if(!$error)
 {
 	echo $title;
-} 
+}
 else
 {
 ?>
-..Search what you want to Buy!.. 
+..Search what you want to Buy!..
 <?php
 }
 ?>"
@@ -86,7 +86,7 @@ maxlength="25" id="search">
 <div class="parent">
   <h2>Search Results</h2><hr color="black"><br>
   <div align="center" id="wrapper">
-  
+
   <?php
   if(!$error)
   {
@@ -106,10 +106,10 @@ else
 	echo "NO RESULT FOUND !";
 }
   ?>
-  
-  
+
+<br><br>
   </div>
-  </div>
+</div>
 </div>
 
 
