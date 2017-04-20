@@ -114,7 +114,8 @@ else
 
 
 </div>
-
+<br>
+<br>
 <div id="footer">
 <h3><br>Project Developed by Aniket,Neel,Monis and Kalpesh</h3>
 </div>
