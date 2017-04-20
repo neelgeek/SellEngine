@@ -375,7 +375,7 @@ html,body {
 }
 .title {
 	font-size:22px;
-	color:#363d47;
+	color:#1ab188;
 	text-shadow:1px 1px 1px #FFF;
 	font-weight:normal;
 	top: -17px;
@@ -1728,7 +1728,8 @@ html,body {
 }
 
 .productdata {
-	
+	align:left;
+	color:#1ab188;
 }
 .infospan {
 	color:#707780;

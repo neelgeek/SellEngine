@@ -53,8 +53,6 @@ class product
 
 public function search($filters= array())
 {
-
-	
        $sub2=array_keys($filters);
 		
 		$sub1 = '';
@@ -86,7 +84,7 @@ public function search($filters= array())
 			$x++;	
 
 		}
-		  $query = "SELECT * FROM products WHERE {$sub1}";
+		    $query = "SELECT * FROM products WHERE {$sub1}";
 
 
 		$searchResults = $this->_db->setquery($query);

@@ -3,6 +3,8 @@ require_once 'php/init.php';
 $prod_id = $_GET['id'];
 $user = new user();
 $prod = new product();
+if($user->IsLoggedIn())
+{
 if(input::exists())
 {
   $id=input::get('id');
@@ -15,14 +17,14 @@ if(input::exists())
 }
 else
 {
-if($user->IsLoggedIn())
-{
   $prod->find($prod_id);
 
   $results=$prod->results()[0];
-  
-
 }
+}
+else
+{
+  header('location: index.php');
 }
 ?>
 <html>

@@ -12,7 +12,7 @@ if($user->IsLoggedIn())
     ));
 
   $result = $prod->results();
-  if(count($result>0))
+  if(count($result)<1)
   {
       $error=true;
   }
@@ -50,10 +50,9 @@ else
   <?php 
 }
 ?>
-
+
 
     </ol>
-}
 
 </div>
 </body>

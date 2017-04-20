@@ -57,7 +57,7 @@ else
   
   <ul>
   <li><a href="editprofile.php"><b>Edit Profile</b></a></li>
-  <li><a href="test2.html"><b>My Ads</b></a></li>
+  <li><a href="list.php"><b>My Ads</b></a></li>
   <li><a href="login.php"><b>Logout</b></a></li> 
   </ul>
 	</ul>
@@ -108,6 +108,7 @@ else
   ?>
   
   
+  </div>
   </div>
 </div>
 

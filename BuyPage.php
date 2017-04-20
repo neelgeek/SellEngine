@@ -103,9 +103,9 @@ div.tab button.active {
 							<a class="fancybox" href="BuyPage/images/sample-1.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="BuyPage/images/sample-1.jpg" alt="" class="img-responsive" /></a>
 						</div> -->
 					</div>
-					<div class="col-md-6 det-desc">
-						<div class="productdata">
-							<div class="infospan">Price<span><?php echo $res->price ?></span></div>
+					<div class="col-md-6 det-desc" align="left">
+						<div class="productdata" align="left">
+							<div class="infospan" align="left">Price<span><?php echo $res->price ?></span></div>
 							<div class="infospan">City<span><?php echo $res->city ?></span></div>
 							<div class="infospan">Type<span><?php echo $res->type ?></span></div>
 							<div class="average">

@@ -35,7 +35,7 @@ else
 
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="register product/css/signin.css">
+  <link rel="stylesheet" type="text/css" href="Register Product/css/signin.css">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
 </head>
@@ -44,9 +44,12 @@ else
   <form action="index.php" method="post" >
 <div class="toprow">
 <div class="field-wrap">
-<input type="image" src="image/home.png" alt="Submit" style="width:60px;height:60px">
+<input type="image" src="Register Product/image/home.png" alt="Submit" style="width:60px;height:60px">
+</div>
+
 </form>
 </div>
+
   <div class="form">
   <h1>AD PAGE</h1>
     <form method="post" name="myForm">

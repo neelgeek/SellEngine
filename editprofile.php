@@ -48,9 +48,9 @@ else
 <body>
 <div class="form">
    <div class="toprow">
-<form>
+<form action="index.php">
    <div class="field-wrap">
-   <input type="image" src="home.png" width="60" height="60">
+   <input type="image" src="EditProfile/home.png" width="60" height="60">
 </form>
 </div>
 <div>
@@ -61,7 +61,6 @@ else
           
           
           <form action="" method="post">
-          
           <div class="top-row">
             <div class="field-wrap">
               <label>

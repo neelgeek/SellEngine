@@ -3,7 +3,7 @@
 
 @charset="utf-8";
 /* CSS Document :
-1:Nav-bar color=#2895cc,#52cc28,#efa31f;
+1:Nav-bar color=#2895cc,#52cc28,#''''efa31f'''';
 How To Make a full website html css
 
 */
@@ -253,9 +253,21 @@ div.content{
 	height: 60px;
 	width: 960px;
 	border: 2px solid ;
+	border-color: #1ab188;
 	float: center;
 	margin: 5px;
 	margin-top: 20px;
 	text-align: absolute;
+	text-indent: 10px;
 	
+}
+
+hr
+{
+	display:block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+	border-style: inset;
+	border-width: 1.32px;
 }

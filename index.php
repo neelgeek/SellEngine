@@ -1,4 +1,4 @@
-<?php
+  <?php
 require_once 'php/init.php';
 echo session::flash('home');
 $user=new user();
@@ -28,7 +28,7 @@ if($user->IsLoggedIn())
 
 <body>
 <div id="nav1">
-    <h1><a href="index.html"><img src="homepage/logo1.png">SELL ENGINE</a></h1>
+    <h1><a href="index.php"><img src="homepage/logo1.png">SELL ENGINE</a></h1>
 	<ul>
 	<!-- <li id="active"><a href="index.html"><b>Home</b></a></li> -->
 
@@ -80,32 +80,32 @@ Changes image every 5 seconds:
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 5</div>
-  <img src="homepage/1.jpg" style="width:100%">
+  <img src="Homepage/1.jpg" style="width:100%">
   <div class="text">Caption Text</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 5</div>
-  <img src="homepage/2.jpg" style="width:100%">
+  <img src="Homepage/2.jpg" style="width:100% ">
   <div class="text">Caption Two</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 5</div>
-  <img src="homepage/3.jpg" style="width:100%">
+  <img src="Homepage/3.jpg" style="width:100%">
   <div class="text">Caption Three</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">4 / 5</div>
-  <img src="homepage/4.jpg" style="width:100%">
+  <img src="Homepage/4.jpg" style="width:100%">
   <div class="text">Caption Three</div>
 </div>
 
 
 <div class="mySlides fade">
   <div class="numbertext">5 / 5</div>
-  <img src="homepage/5.png" style="width:100%">
+  <img src="Homepage/5.png" style="width:100%">
   <div class="text">Caption Three</div>
 </div>
 
